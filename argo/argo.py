@@ -26,9 +26,10 @@ def extract_profile(filename, pid=None):
     for v in nc.variables:
         if 'N_PROF' not in nc.variables[v].dimensions:
             for n in range(len(pid)):
-                #if nc.variables[v].typecode() == 'c':
-                #    output[n].attributes[v] = "".join(nc.variables[v][:]).strip()
-                #else:
+                # if nc.variables[v].typecode() == 'c':
+                #    output[n].attributes[v] = "".join(
+                #      nc.variables[v][:]).strip()
+                # else:
                 output[n].attributes[v] = nc.variables[v][:]
         # Different values for each profile
         else:
@@ -45,11 +46,12 @@ def extract_profile(filename, pid=None):
                     if 'N_LEVELS' not in dims:
                         output[n].attributes[v] = pvar[p]
                     else:
-                        output[n].data[v] = pvar[p].swapaxes(0, dims.index('N_LEVELS'))
+                        output[n].data[v] = pvar[p].swapaxes(0,
+                                dims.index('N_LEVELS'))
     return output
 
 
-class ARGO(object):    
+class ARGO(object):
     def __init__(self):
 
         self.data = {}
