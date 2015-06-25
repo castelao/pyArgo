@@ -6,12 +6,6 @@ except:
     from pupynere import netcdf_file as Dataset
 
 
-
-
-
-filename = 'test_data/D20150316_prof.nc'
-
-
 def extract_profile(filename, pid=None):
     """ Extract ARGO profiles from a netCDF file
 
