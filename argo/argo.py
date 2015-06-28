@@ -6,7 +6,7 @@ except:
     from pupynere import netcdf_file as Dataset
 
 
-def extract_profile(filename, pid=None):
+def profile_from_nc(filename, pid=None):
     """ Extract ARGO profiles from a netCDF file
 
         If n is not given, extract all profiles.
