@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from datetime import datetime, timedelta
+
 try:
     from netCDF4 import Dataset
 except:
@@ -48,6 +50,17 @@ def profile_from_nc(filename, pid=None):
                     else:
                         output[n].data[v] = pvar[p].swapaxes(0,
                                 dims.index('N_LEVELS'))
+
+    # Issue #4
+    # https://github.com/castelao/argo/issues/4
+    if 'REFERENCE_DATE_TIME' in nc.variables:
+        d0 = datetime.strptime(
+                "".join(nc.variables['REFERENCE_DATE_TIME']),
+                "%Y%m%d%H%M%S")
+    for n, p in enumerate(output):
+        output[n].attributes['datetime'] = d0 + \
+                timedelta(days=p.attributes['JULD'])
+
     return output
 
 
