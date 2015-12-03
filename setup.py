@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# Licensed under a 3-clause BSD style license - see LICENSE.rst
 
 
 try:
@@ -15,13 +16,18 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
+version = '0.0.1'
+
 requirements = [
         'pupynere'
 ]
 
+test_requirements = [
+]
+
 setup(
     name='pyargo',
-    version='0.0.1',
+    version=version,
     description="Python package to handle ARGO profiles.",
     long_description=readme + '\n\n' + history,
     author="Guilherme Castelao",
@@ -34,17 +40,18 @@ setup(
                  'argo'},
     include_package_data=True,
     install_requires=requirements,
-    license="MIT",
+    license="3-clause BSD",
     zip_safe=False,
-    keywords='argo',
+    keywords='ARGO oceanography',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: Python Software Foundation License',
+        'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Topic :: Scientific/Engineering',
     ],
+    test_suite='tests',
+    tests_require=test_requirements
 )
