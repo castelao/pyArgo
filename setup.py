@@ -22,8 +22,9 @@ requirements = [
         'pupynere'
 ]
 
-test_requirements = [
-]
+with open('test-requirements.txt') as test_requirements_file:
+    test_requirements = test_requirements_file.read()
+
 
 setup(
     name='pyargo',
