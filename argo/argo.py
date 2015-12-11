@@ -2,10 +2,11 @@
 
 from datetime import datetime, timedelta
 
-try:
-    from netCDF4 import Dataset
-except:
-    from pupynere import netcdf_file as Dataset
+from netCDF4 import Dataset
+#try:
+#    from netCDF4 import Dataset
+#except:
+#    from pupynere import netcdf_file as Dataset
 
 
 def profile_from_nc(filename, pid=None):
