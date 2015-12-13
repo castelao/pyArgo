@@ -36,6 +36,7 @@ setup(
     url='https://github.com/castelao/argo',
     packages=[
         'argo',
+        'argo.utils',
     ],
     package_dir={'argo':
                  'argo'},
