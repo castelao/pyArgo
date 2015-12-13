@@ -56,7 +56,8 @@ def profile_from_nc(filename, pid=None):
     # https://github.com/castelao/argo/issues/4
     if 'REFERENCE_DATE_TIME' in nc.variables:
         d0 = datetime.strptime(
-                "".join(nc.variables['REFERENCE_DATE_TIME']),
+                (nc.variables['REFERENCE_DATE_TIME'][:]
+                    ).tostring().decode('utf-8'),
                 "%Y%m%d%H%M%S")
     for n, p in enumerate(output):
         output[n].attributes['datetime'] = d0 + \
