@@ -6,7 +6,9 @@
 """
 
 from argo.argo import profile_from_nc
+from argo.utils import download_testdata
 
+datafile = download_testdata('20150127_prof.nc')
 
 def validate_profile(p):
     assert hasattr(p, 'keys')
@@ -15,21 +17,21 @@ def validate_profile(p):
 
 
 def test_extract_1_profile():
-    pp = profile_from_nc('test_data/20150127_prof.nc', 0)
+    pp = profile_from_nc(datafile, 0)
     assert len(pp) == 1
     for p in pp:
         validate_profile(p)
 
 
 def test_extract_list_profiles():
-    pp = profile_from_nc('test_data/20150127_prof.nc', [0, 2, 5])
+    pp = profile_from_nc(datafile, [0, 2, 5])
     assert len(pp) == 3
     for p in pp:
         validate_profile(p)
 
 
 def test_extract_all_profiles():
-    pp = profile_from_nc('test_data/20150127_prof.nc')
+    pp = profile_from_nc(datafile)
     assert len(pp) > 1
     for p in pp:
         validate_profile(p)
