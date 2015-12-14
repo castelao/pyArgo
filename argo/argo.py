@@ -53,7 +53,7 @@ def profile_from_nc(filename, pid=None):
                                 dims.index('N_LEVELS'))
 
     # Issue #4
-    # https://github.com/castelao/argo/issues/4
+    # https://github.com/castelao/pyARGO/issues/4
     if 'REFERENCE_DATE_TIME' in nc.variables:
         d0 = datetime.strptime(
                 (nc.variables['REFERENCE_DATE_TIME'][:]

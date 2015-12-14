@@ -9,14 +9,13 @@ except ImportError:
     from distutils.core import setup
 
 
-
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read().replace('.. :changelog:', '')
 
-version = '0.0.2'
+version = '0.0.3'
 
 requirements = [
         'netCDF4'
@@ -27,13 +26,13 @@ with open('test-requirements.txt') as test_requirements_file:
 
 
 setup(
-    name='pyargo',
+    name='pyARGO',
     version=version,
     description="Python package to handle ARGO profiles.",
     long_description=readme + '\n\n' + history,
     author="Guilherme Castelao",
     author_email='guilherme@castelao.net',
-    url='https://github.com/castelao/argo',
+    url='https://github.com/castelao/pyARGO',
     packages=[
         'argo',
         'argo.utils',
