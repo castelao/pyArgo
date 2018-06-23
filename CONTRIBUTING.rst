@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/castelao/pyARGO/issues.
+Report bugs at https://github.com/castelao/pyArgo/issues.
 
 If you are reporting a bug, please include:
 
@@ -36,8 +36,8 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-PyARGO could always use more documentation, whether as part of the
-official PyARGO docs, in docstrings, or even on the web in blog posts,
+PyArgo could always use more documentation, whether as part of the
+official PyArgo docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback

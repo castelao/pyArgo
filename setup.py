@@ -26,13 +26,13 @@ with open('test-requirements.txt') as test_requirements_file:
 
 
 setup(
-    name='pyARGO',
+    name='pyArgo',
     version=version,
-    description="Python package to handle ARGO profiles.",
+    description="Python package to handle Argo profiles.",
     long_description=readme + '\n\n' + history,
     author="Guilherme Castelao",
     author_email='guilherme@castelao.net',
-    url='https://github.com/castelao/pyARGO',
+    url='https://github.com/castelao/pyArgo',
     packages=[
         'argo',
         'argo.utils',
@@ -43,7 +43,7 @@ setup(
     install_requires=requirements,
     license="3-clause BSD",
     zip_safe=False,
-    keywords='ARGO oceanography',
+    keywords='Argo oceanography',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Science/Research',

@@ -10,7 +10,7 @@ from netCDF4 import Dataset
 
 
 def profile_from_nc(filename, pid=None):
-    """ Extract ARGO profiles from a netCDF file
+    """ Extract Argo profiles from a netCDF file
 
         If n is not given, extract all profiles.
     """
@@ -24,7 +24,7 @@ def profile_from_nc(filename, pid=None):
     elif type(pid) is int:
         pid = [pid]
 
-    output = [ARGO() for n in pid]
+    output = [Argo() for n in pid]
 
     for v in nc.variables:
         if 'N_PROF' not in nc.variables[v].dimensions:
@@ -53,7 +53,7 @@ def profile_from_nc(filename, pid=None):
                                 dims.index('N_LEVELS'))
 
     # Issue #4
-    # https://github.com/castelao/pyARGO/issues/4
+    # https://github.com/castelao/pyArgo/issues/4
     if 'REFERENCE_DATE_TIME' in nc.variables:
         d0 = datetime.strptime(
                 (nc.variables['REFERENCE_DATE_TIME'][:]
@@ -66,7 +66,7 @@ def profile_from_nc(filename, pid=None):
     return output
 
 
-class ARGO(object):
+class Argo(object):
     def __init__(self):
 
         self.data = {}

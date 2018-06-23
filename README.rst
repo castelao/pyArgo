@@ -1,22 +1,22 @@
 ===============================
-PyARGO
+PyArgo
 ===============================
 
-.. image:: https://readthedocs.org/projects/pyARGO/badge/?version=latest
-   :target: https://readthedocs.org/projects/pyARGO/?badge=latest
+.. image:: https://readthedocs.org/projects/pyArgo/badge/?version=latest
+   :target: https://readthedocs.org/projects/pyArgo/?badge=latest
       :alt: Documentation Status
 
-.. image:: https://img.shields.io/travis/castelao/pyARGO.svg
-        :target: https://travis-ci.org/castelao/pyARGO
+.. image:: https://img.shields.io/travis/castelao/pyArgo.svg
+        :target: https://travis-ci.org/castelao/pyArgo
 
-.. image:: https://img.shields.io/pypi/v/pyARGO.svg
-        :target: https://pypi.python.org/pypi/pyARGO
+.. image:: https://img.shields.io/pypi/v/pyArgo.svg
+        :target: https://pypi.python.org/pypi/pyArgo
 
 
-Python package to handle ARGO profiles.
+Python package to handle Argo profiles.
 
 * Free software: BSD License
-* Documentation: https://pyARGO.readthedocs.org.
+* Documentation: https://pyArgo.readthedocs.org.
 
 Features
 --------
